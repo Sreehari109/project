@@ -1,0 +1,30 @@
+.box{
+    width : 150px;
+    height : 150px;
+    background-color: lightblue;
+    text-align: center;
+    padding-top : 40px  ;
+    box-sizing: border-box;
+    font-size: 22px;
+    
+    position: relative;
+    animation-name: sample;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+    animation-timing-function :ease-in;
+    
+
+}
+.box:hover{
+    width: 200px;
+}
+
+@keyframes sample {
+    0%{ left : 0px ;  transform: rotate(0deg);   }
+    25%{ left : 0px; transform : rotate(20deg);     background-color: orange;}
+    50% { left : 1199px;   transform: rotate(0deg); background-color: green; }
+    55% { left : 1199px; transform : rotate(0deg);  background-color : gray; }
+    100% { left : 0px;  transform : rotate(-360deg);  background-color: rgb(3, 3, 17);}
+}   
+

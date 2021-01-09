@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant</title>
+</head>
+<body onload="fun()">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        background-color: blue;
+        text-align: center;
+      }
+    
+      
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: black;
+          }
+          
+          .flex-container > div {
+            background-color:white;
+            width: 150px;
+            margin: 10px;
+            text-align: center;
+            line-height: 55px;
+            font-size: 30px;
+           }
+    
+          .flex-container2  > div {
+            background-color: black;
+            width: 250px;
+            margin: 100px;
+            vertical-align: auto;
+            
+          } 
+          
+          #loader{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border-top: springgreen 5px solid;
+            animation-duration:2s ;
+            animation-name:nothing ;
+            animation-timing-function:linear ;
+            animation-iteration-count: infinite;
+        }
+ 
+        .slider{
+            width:50% ;
+            height: 400px;
+            border: black 5px solid;
+            background-image: url(burger.jpg);
+            background-size: 100% 100%;
+            transition: 0.3;
+        }    
+
+              @keyframes nothing{
+            from{  transform :rotate(0deg);}
+            to{transform:rotate(360deg) ;}
+        }
+        </style>
+         <div id = "loader">
+          </div>
+          <div id="content"  style="display: none;">
+            <h1>Coding  Fast Foods</h1>
+           <div class="flex-container">
+              <a href=""><div>Home</a></div>
+               <a href="file:///C:/Users/MANU%20S/Desktop/New%20folder/Menu%20of%20food%20website.html"><div>Menu</a></div>
+               <a href="file:///C:/Users/MANU%20S/Desktop/New%20folder/About%20Us%20Food%20websiteproject.html"><div>About Us</a></div>
+               <a href="file:///C:/Users/MANU%20S/Desktop/New%20folder/Signup%20for%20food%20website.html"><div>Sign Up</a></div>
+               <a href="file:///C:/Users/MANU%20S/Desktop/New%20folder/Login%20for%20food.html"><div>Login</a></div>
+             
+           </div>
+           <br><br>
+           <div class="box">Coding Fast Food</div>
+          </div>
+          <div class="slider" id="slider">
+            <div id="dots">
+                <input type="radio" id="btn0" name="dots">
+                <input type="radio" id="btn1" name="dots">
+                <input type="radio" id="btn2" name="dots">
+                <input type="radio" id="btn3" name="dots">
+            </div>
+                </div>
+           <script>
+             window.onerror = function(msg,url,line){
+               alert("Message of error is : "+msg);
+               alert("Url is :"+url);
+               alert("Line no :"+line);
+             }
+            function fun(){
+                setTimeout(visible,3000);
+            }
+     
+             function visible(){
+                 document.getElementById("loader").style.display="none";
+                 document.getElementById("content").style.display="block";
+             }
+             var images = ["burger.jpg","fastfood.jpg","frenchfries.jpg.jpg","pizza.jpg"];
+  var i = 0;
+
+setInterval(slide,3000);
+
+  function slide()
+  {
+      i++;
+      if(i>=images.length){i=0;}
+      document.getElementById("slider").style.backgroundImage="URL("+images[i]+")";
+      document.getElementById("btn"+i).checked = "checked";
+  }
+         </script>
+           
+         <br><br>  
+</body>
+</html>
